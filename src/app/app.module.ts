@@ -13,15 +13,19 @@ import { CheckInputValidDirective } from './directives/check-input-valid.directi
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { UpdateComponent } from './components/update/update.component';
-import { AddComponent } from './components/add/add.component';
 import { LoginComponent } from './components/auth//login/login.component';
 import { AuthGuard } from './Guards/auth.guard';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { AddComponent } from './components/meet/add/add.component';
 const routes: Routes = [
   {
     path: "",
     component:  MeetComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: "register",
+    component: RegisterComponent
   },
   {
     path: "login",

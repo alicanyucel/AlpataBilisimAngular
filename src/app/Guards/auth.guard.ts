@@ -15,8 +15,8 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if(localStorage.getItem("user"))
       return true;
-      this._router.navigateByUrl("/login");
-      this._toastr.warning("kullanıcı girişi yapmalısınız");
+      this._router.navigateByUrl("/register");
+      this._toastr.warning("kullanıcı kaydı yapmalısınız");
       return false;
   }
 }

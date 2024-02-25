@@ -7,7 +7,9 @@ import { ToastrService } from 'ngx-toastr';
   selector: 'app-root',
   template: `<nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/meets">Toplantılar</a>
+    <a class="navbar-brand"  routerLink="/meets">
+    <i class="fa-brands fa-meetup"></i>
+    Toplantılar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

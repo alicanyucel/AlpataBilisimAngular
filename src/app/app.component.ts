@@ -20,7 +20,7 @@ import { ToastrService } from 'ngx-toastr';
         </li>
         <li class="nav-item">
         <a class="nav-link active" aria-current="page" routerLink="/file">
-        <i class="fa-solid fa-file">Dosya Yükle</i> 
+        <i class="fa-solid fa-file">Dosya Ekle</i> 
        </a>
       </li>
       </ul>

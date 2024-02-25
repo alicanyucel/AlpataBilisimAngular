@@ -24,6 +24,11 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: "file",
+    component:  FileUploadComponent
+   
+  },
+  {
     path: "register",
     component: RegisterComponent
   },

@@ -15,9 +15,14 @@ import { ToastrService } from 'ngx-toastr';
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="/">
-          <i class="fa fa-home">Ana Sayfa</i>  
+          <i class="fa fa-home">Ana Sayfa</i> 
          </a>
         </li>
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" routerLink="/file">
+        <i class="fa fa-home">Dosya Yükle</i> 
+       </a>
+      </li>
       </ul>
       <form class="d-flex" role="search">
         <button class="btn btn-outline-success" routerLink="/login" *ngIf="!isAuth" type="submit" >

@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
-import { AuthComponent } from './components/auth/auth.component';
 import { MeetComponent } from './components/meet/meet.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
 import { SendMailComponent } from './components/send-mail/send-mail.component';
@@ -15,8 +14,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { UpdateComponent } from './components/update/update.component';
 import { AddComponent } from './components/add/add.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components/auth//login/login.component';
 import { AuthGuard } from './Guards/auth.guard';
+import { RegisterComponent } from './components/auth/register/register.component';
 const routes: Routes = [
   {
     path: "",
@@ -41,14 +41,14 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    AuthComponent,
     MeetComponent,
     FileUploadComponent,
     SendMailComponent,
     CheckInputValidDirective,
     UpdateComponent,
     AddComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

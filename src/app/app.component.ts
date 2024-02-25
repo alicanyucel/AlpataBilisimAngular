@@ -13,6 +13,11 @@ import { ToastrService } from 'ngx-toastr';
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+      <a class="nav-link active" aria-current="page" routerLink="/register">
+      <i class="fa fa-user" aria-hidden="true">Hesap Ekle</i>
+     </a>
+    </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="/">
           <i class="fa fa-home">Ana Sayfa</i> 

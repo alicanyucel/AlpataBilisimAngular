@@ -6,49 +6,62 @@
             </div>
             <div class="card-body">
                 <form autocomplete="off" #registerForm="ngForm" (ngSubmit)="register(registerForm)">
-                    <div class="form-group">
-                        <label for="name">Ad Soyad</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          [(ngModel)]="model.Name"
-                          name="name"
-                          id="name"
-                          #name
-                          [appCheckInputValid]="name.validity.valid"
-                          required
-                          minlength="3">
+                    <div class="form-group mt-2">
+                        <label for="name">Ad</label>
+                        <input type="text" class="form-control" [(ngModel)]="model.Name" name="name" id="name" #name
+                            [appCheckInputValid]="name.validity.valid" required minlength="6">
                         <div class="invalid-feedback">
-                            Ad soyad alanı en az 3 karakter olmalıdır!
+                            Ad soyad alanı en az 6 karakter olmalıdır!
                         </div>
                     </div>
                     <div class="form-group mt-2">
+                        <label for="lastname">Soyad</label>
+                        <input type="text" class="form-control" [(ngModel)]="model.lastname" name="lastName"
+                            id="lastname" #lastname [appCheckInputValid]="lastname.validity.valid" required
+                            minlength="6">
+                        <div class="invalid-feedback">
+                            soyad alanı en az 6 karakter olmalıdır!
+                        </div>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="username">Kullancı Adı</label>
+                        <input type="text" class="form-control" [(ngModel)]="model.username" name="username"
+                            id="username" #username [appCheckInputValid]="username.validity.valid" required
+                            minlength="6">
+                        <div class="invalid-feedback">
+                            kullanıcı en az 6 karakter olmalıdır!
+                        </div>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="phone">Telefon</label>
+                        <input type="text" class="form-control" [(ngModel)]="model.phone" name="phone"
+                            id="phone" #phone [appCheckInputValid]="phone.validity.valid" required
+                            minlength="11" maxlength="11">
+                        <div class="invalid-feedback">
+                            telefon  11 karakter olmalıdır!
+                        </div>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="image">Profil Resmi</label>
+                        <input type="text" class="form-control" [(ngModel)]="model.image" name="image"
+                            id="image" #image [appCheckInputValid]="image.validity.valid" required>
+                        <div class="invalid-feedback">
+                         profil resmi boş olmamalıdır.!
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-2">
                         <label for="email">Mail Adresi</label>
-                        <input
-                          type="email"
-                          class="form-control"
-                          [(ngModel)]="model.Email"
-                          name="email"
-                          id="email"
-                          #email
-                          [appCheckInputValid]="email.validity.valid"
-                          required
-                          minlength="3">
+                        <input type="email" class="form-control" [(ngModel)]="model.Email" name="email" id="email"
+                            #email [appCheckInputValid]="email.validity.valid" required minlength="3">
                         <div class="invalid-feedback">
                             Geçerli bir mail adresi yazın!
                         </div>
                     </div>
                     <div class="form-group mt-2">
                         <label for="password">Şifre</label>
-                        <input
-                          type="password"
-                          class="form-control"
-                          [(ngModel)]="model.password"
-                          name="password"
-                          id="password"
-                          #password
-                          [appCheckInputValid]="password.validity.valid"
-                          required>
+                        <input type="password" class="form-control" [(ngModel)]="model.password" name="password"
+                            id="password" #password [appCheckInputValid]="password.validity.valid" required>
                         <div class="invalid-feedback">
                             Şifre alanı boş olamaz!
                         </div>

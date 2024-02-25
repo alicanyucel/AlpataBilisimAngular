@@ -7,6 +7,7 @@ import { UserModel } from '../models/user';
   providedIn: 'root'
 })
 export class AuthService {
+  // kahve molası...
 api:string="https://localhost:7245/api"+"/Auth";
   constructor(private _http:HttpClient,
     private _router:Router) { }

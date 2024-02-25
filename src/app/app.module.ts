@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { CheckInputValidDirective } from './directives/check-input-valid.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { UpdateComponent } from './components/update/update.component';
+import { UpdateComponent } from './components/meet/update/update.component';
 import { LoginComponent } from './components/auth//login/login.component';
 import { AuthGuard } from './Guards/auth.guard';
 import { RegisterComponent } from './components/auth/register/register.component';

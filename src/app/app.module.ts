@@ -1,16 +1,43 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
-import { AuthComponent } from './auth/auth.component';
-import { MeetComponent } from './meet/meet.component';
-import { FileUploadComponent } from './file-upload/file-upload.component';
-import { SendMailComponent } from './send-mail/send-mail.component';
+import { AuthComponent } from './components/auth/auth.component';
+import { MeetComponent } from './components/meet/meet.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { SendMailComponent } from './components/send-mail/send-mail.component';
 import { CommonInterceptor } from './interceptors/common.interceptor';
 import { FormsModule } from '@angular/forms';
 import { CheckInputValidDirective } from './directives/check-input-valid.directive';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
+import { UpdateComponent } from './components/update/update.component';
+import { AddComponent } from './components/add/add.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './Guards/auth.guard';
+const routes: Routes = [
+  {
+    path: "",
+    component:  MeetComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "login",
+    component: LoginComponent
+  },
+  {
+    path: "add",
+    component: AddComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "update/:value",
+    component: UpdateComponent,
+    canActivate: [AuthGuard]
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,13 +45,23 @@ import { CheckInputValidDirective } from './directives/check-input-valid.directi
     MeetComponent,
     FileUploadComponent,
     SendMailComponent,
-    CheckInputValidDirective
+    CheckInputValidDirective,
+    UpdateComponent,
+    AddComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+     BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      closeButton: true,
+      progressBar: true,
+    }),
+    RouterModule.forRoot(routes)
+    
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS, useClass: CommonInterceptor, multi: true

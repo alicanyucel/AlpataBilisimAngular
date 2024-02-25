@@ -1,1 +1,33 @@
-<p>meet works!</p>
+<div class="container">
+    <div class="form-group mt-4 float-start">
+        <button class="btn btn-outline-primary" routerLink="/add">
+            <i class="fa fa-add"></i> Toplantı Ekle
+           </button>
+    </div>
+    <div class="form-group mt-4 float-end">
+        <input [(ngModel)]="filtertext" type="search" class="form-control"  placeholder="Arama Yapın">
+        
+    </div>
+<table class="table table-hover mt-2">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Toplantı Adı</th>
+            <th>Dosya Adresi</th>
+            <th>Toplantı içeriği</th>
+            <th>Toplantı Başlama Tarihi</th>
+            <th>Toplantı Bitiş Tarihi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let meet of meets  let index=index ">
+            <td>{{index+1}}</td>
+            <td>{{meet.Name}}</td>
+            <td>{{meet.FileUrl}}</td>
+            <td>{{meet.Description}}</td>
+            <td>{{meet.StartTime}}</td>
+            <td>{{meet.EndTime}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

@@ -1,1 +1,47 @@
-<p>add works!</p>
+<div class="container">
+    <form #addform="ngForm" (ngSubmit)="add(addform)">
+        <div class="form-group mt-2">
+            <label for="title">Toplantı </label>
+            <input type="text" #Name name="Name" required minlength="5" ngModel class="form-control" [appCheckInputValid]="Name">
+       <div class="invalid-feedback">
+        Toplantı ismi boş bırakılamaz
+       </div>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="title">Dosya Adresi </label>
+            <input type="text" #FileUrl name="FileUrl" required minlength="5" ngModel class="form-control" [appCheckInputValid]="FileUrl">
+       <div class="invalid-feedback">
+        Dosya adresi boş bırakılamaz
+       </div>
+        </div>
+       
+        <div class="form-group mt-2">
+            <label for="title">Toplantı Tanımı </label>
+            <input type="text" #Description name="Description" required minlength="5" ngModel class="form-control" [appCheckInputValid]="Description">
+       <div class="invalid-feedback">
+        Dosya 
+        içeriği boş bırakılamaz
+       </div>
+        </div>
+        <div class="form-group mt-2">
+            <label for="title">Toplantı Başlama Saati </label>
+            <input type="text" #StartTime name="StartTime" required minlength="5" ngModel class="form-control" [appCheckInputValid]="StartTime">
+       <div class="invalid-feedback">
+       Toplantı başlama saatini giriniz
+       </div>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="title">Toplantı Bitiş Saati </label>
+            <input type="text" #EndTime name="EndTime" required minlength="5" ngModel class="form-control" [appCheckInputValid]="EndTime">
+       <div class="invalid-feedback">
+       Toplantı bitiş saatini giriniz
+       </div>
+        </div>
+        <div class="form-group mt-2">
+            <button class="btn btn-outline-primary w-100" [disabled]="!addform.valid">
+                <i class="fas fa-save"></i> Kaydet</button>
+        </div>
+    </form>
+</div>

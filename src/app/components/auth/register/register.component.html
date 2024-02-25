@@ -15,7 +15,7 @@
                           name="name"
                           id="name"
                           #name
-                          [appValid]="name.validity.valid"
+                          [appCheckInputValid]="name.validity.valid"
                           required
                           minlength="3">
                         <div class="invalid-feedback">
@@ -31,7 +31,7 @@
                           name="email"
                           id="email"
                           #email
-                          [appValid]="email.validity.valid"
+                          [appCheckInputValid]="email.validity.valid"
                           required
                           minlength="3">
                         <div class="invalid-feedback">
@@ -47,7 +47,7 @@
                           name="password"
                           id="password"
                           #password
-                          [appValid]="password.validity.valid"
+                          [appCheckInputValid]="password.validity.valid"
                           required>
                         <div class="invalid-feedback">
                             Şifre alanı boş olamaz!

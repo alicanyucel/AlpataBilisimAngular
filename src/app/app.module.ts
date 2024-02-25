@@ -17,7 +17,6 @@ import { LoginComponent } from './components/auth//login/login.component';
 import { AuthGuard } from './Guards/auth.guard';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { AddComponent } from './components/meet/add/add.component';
-import { ValidDirective } from './directives/valid.directive';
 const routes: Routes = [
   {
     path: "meets",
@@ -59,7 +58,6 @@ const routes: Routes = [
     AddComponent,
     LoginComponent,
     RegisterComponent,
-    ValidDirective
   ],
   imports: [
     BrowserModule,

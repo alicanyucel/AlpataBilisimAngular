@@ -6,7 +6,6 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { MeetComponent } from './components/meet/meet.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
-import { SendMailComponent } from './components/send-mail/send-mail.component';
 import { CommonInterceptor } from './interceptors/common.interceptor';
 import { FormsModule } from '@angular/forms';
 import { CheckInputValidDirective } from './directives/check-input-valid.directive';
@@ -52,7 +51,6 @@ const routes: Routes = [
     AppComponent,
     MeetComponent,
     FileUploadComponent,
-    SendMailComponent,
     CheckInputValidDirective,
     UpdateComponent,
     AddComponent,

@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class NewsletterService {
+export class MeetsService {
   api: string = "https://localhost:7245/api" + "/Meets";
   constructor(
     private _http: HttpClient,

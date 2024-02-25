@@ -19,7 +19,7 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { AddComponent } from './components/meet/add/add.component';
 const routes: Routes = [
   {
-    path: "",
+    path: "meets",
     component:  MeetComponent,
     canActivate: [AuthGuard]
   },
